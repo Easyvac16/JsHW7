@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="main.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        #galleryContainer {
+            margin: 20px;
+            position: relative;
+        }
+
+        #imageDisplay {
+            max-width: 100%;
+            height: auto;
+        }
+
+        #navigationButtons {
+            margin-top: 10px;
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .arrowButton {
+            font-size: 20px;
+            padding: 10px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="galleryContainer">
+        <div id="navigationButtons">
+            <div class="arrowButton" onclick="showPreviousImage()" id="prevButton" disabled>&lt;</div>
+            <div class="arrowButton" onclick="showNextImage()" id="nextButton">&gt;</div>
+        </div>
+        <img id="imageDisplay" src="" alt="Gallery Image">
+    </div>
+</body>
+<a href="task1.html"></a>
+<a href="task3.html"></a>
+<a href="task4.html"></a>
+<a href="task5.html"></a>
+<a href="task6.html"></a>
+<a href="task7.html"></a>
+<a href="task8.html"></a>
+<a href="task9.html"></a>
+</html>

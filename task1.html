@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="main.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        #sliderContainer {
+            width: 300px;
+            margin-top: 20px;
+        }
+
+        #sliderTrack {
+            width: 95%;
+            height: 10px;
+            background-color: #ddd;
+            position: relative;
+            border-radius: 5px;
+        }
+
+        #sliderThumb {
+            width: 20px;
+            height: 20px;
+            background-color: blue;
+            position: absolute;
+            top: -5px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: ease 0.5s;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div id="sliderContainer">
+            <div id="sliderTrack" onclick="updateSliderValue(event)">
+                <div id="sliderThumb"></div>
+            </div>
+            <p>Current Value: <span id="sliderValue">50</span></p>
+        </div>
+    </div>
+</body>
+<a href="task2.html"></a>
+<a href="task3.html"></a>
+<a href="task4.html"></a>
+<a href="task5.html"></a>
+<a href="task6.html"></a>
+<a href="task7.html"></a>
+<a href="task8.html"></a>
+<a href="task9.html"></a>
+</html>
