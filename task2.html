@@ -51,12 +51,48 @@
         <img id="imageDisplay" src="" alt="Gallery Image">
     </div>
 </body>
-<a href="task1.html"></a>
-<a href="task3.html"></a>
-<a href="task4.html"></a>
-<a href="task5.html"></a>
-<a href="task6.html"></a>
-<a href="task7.html"></a>
-<a href="task8.html"></a>
-<a href="task9.html"></a>
+<script>
+    const imageArray = [
+        'images.jpg',
+        'images(1).jpg',
+        'images(2).jpg',
+    ];
+
+    let currentIndex = 0;
+
+    const imageDisplay = document.getElementById('imageDisplay');
+    const prevButton = document.getElementById('prevButton');
+    const nextButton = document.getElementById('nextButton');
+
+    function showPreviousImage() {
+        currentIndex = (currentIndex - 1 + imageArray.length) % imageArray.length;
+        updateImage();
+    }
+
+    function showNextImage() {
+        currentIndex = (currentIndex + 1) % imageArray.length;
+        updateImage();
+    }
+
+    function updateImage() {
+        imageDisplay.src = imageArray[currentIndex];
+        checkButtonStates();
+    }
+
+    function checkButtonStates() {
+        prevButton.style.visibility = currentIndex === 0 ? 'hidden' : 'visible';
+        nextButton.style.visibility = currentIndex === imageArray.length - 1 ? 'hidden' : 'visible';
+    }
+
+    updateImage();
+</script>
+<a href="task1.html">task 1</a>
+<a href="task3.html">task 3</a>
+<a href="task4.html">task 4</a>
+<a href="task5.html">task 5</a>
+<a href="task6.html">task 6</a>
+<a href="task7.html">task 7</a>
+<a href="task8.html">task 8</a>
+<a href="task9.html">task 9</a>
+
 </html>

@@ -1,14 +1,3 @@
-let currentIndex = 0;
-
-const imageDisplay = document.getElementById('imageDisplay');
-const prevButton = document.getElementById('prevButton');
-const nextButton = document.getElementById('nextButton');
-
-const imageArray = [
-    'images.jpg',
-    'images(1).jpg',
-    'images(2).jpg',
-];
 
 const additionalNewsArray = [
     'Additional News 1',
@@ -32,25 +21,6 @@ function updateSliderValue(event) {
 
 }
 
-function showPreviousImage() {
-    currentIndex = (currentIndex - 1 + imageArray.length) % imageArray.length;
-    updateImage();
-}
-
-function showNextImage() {
-    currentIndex = (currentIndex + 1) % imageArray.length;
-    updateImage();
-}
-
-function updateImage() {
-    imageDisplay.src = imageArray[currentIndex];
-    checkButtonStates();
-}
-
-function checkButtonStates() {
-    prevButton.style.visibility = currentIndex === 0 ? 'hidden' : 'visible';
-    nextButton.style.visibility = currentIndex === imageArray.length - 1 ? 'hidden' : 'visible';
-}
 
 function toggleAccordion(sectionId) {
     const content = document.getElementById(sectionId);
@@ -66,28 +36,6 @@ function toggleAccordion(sectionId) {
         content.style.display = 'none';
     } else {
         content.style.display = 'block';
-    }
-}
-
-const newsContainer = document.getElementById('newsContainer');
-const additionalNewsContainer = document.getElementById('additionalNews');
-
-let currentNewsIndex = 0;
-
-function loadMoreNews() {
-    const batchSize = 3;
-    for (let i = 0; i < batchSize; i++) {
-        if (currentNewsIndex < additionalNewsArray.length) {
-            const additionalNewsItem = document.createElement('div');
-            additionalNewsItem.className = 'newsItem';
-            additionalNewsItem.textContent = additionalNewsArray[currentNewsIndex];
-            additionalNewsContainer.appendChild(additionalNewsItem);
-            currentNewsIndex++;
-        } else {
-
-            document.getElementById('loadMoreButton').style.display = 'none';
-            break;
-        }
     }
 }
 
